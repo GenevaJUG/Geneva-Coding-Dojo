@@ -1,4 +1,9 @@
+import org.apache.commons.lang.time.DateUtils;
+
 import java.math.BigDecimal;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 
 /**
  * Created by IntelliJ IDEA.
@@ -8,6 +13,19 @@ import java.math.BigDecimal;
  * To change this template use File | Settings | File Templates.
  */
 public class TaxCalculator {
+
+    protected static final Date CO2_TAX_DATE;
+
+    static {
+
+        Calendar cal = new GregorianCalendar();
+
+        cal.set(Calendar.DAY_OF_MONTH, 1);
+        cal.set(Calendar.MONTH, Calendar.MARCH);
+        cal.set(Calendar.YEAR, 2001);
+
+        CO2_TAX_DATE = cal.getTime();
+    }
 
     public BigDecimal calculate(Van van) {
 
@@ -28,15 +46,28 @@ public class TaxCalculator {
 
         BigDecimal bd;
 
-        if (car.getEngineSize() <= 1550) {
+        if (isRegistrationDateAfterFirstMarch2001(car)) {
+            bd = BigDecimal.ZERO;
+        }
+        else {
+            if (car.getEngineSize() <= 1550) {
 
-            bd = BigDecimal.valueOf(110L);
+                bd = BigDecimal.valueOf(110L);
 
-        } else {
+            } else {
 
-            bd = BigDecimal.valueOf(165L);
+                bd = BigDecimal.valueOf(165L);
+            }
         }
 
         return bd;
+    }
+
+
+
+    protected boolean isRegistrationDateAfterFirstMarch2001(Car car) {
+
+   
+        return car.getRegistrationDate().after(CO2_TAX_DATE);
     }
 }

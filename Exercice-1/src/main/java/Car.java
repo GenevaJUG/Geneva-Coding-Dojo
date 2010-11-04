@@ -23,4 +23,8 @@ public class Car {
     public void setRegistrationDate(Date date) {
         this.registrationDate = date;
     }
+
+    public Date getRegistrationDate() {
+        return registrationDate;
+    }
 }

@@ -8,7 +8,17 @@ import java.util.Date;
  * To change this template use File | Settings | File Templates.
  */
 public class Car {
-    private Date registrationDate;
+    public Car(Date registrationDate, int engineSize) {
+		this.registrationDate = registrationDate;
+		this.engineSize = engineSize;
+	}
+
+	public Car(Date date, int size, int co2) {
+		// TODO Auto-generated constructor stub
+	}
+
+	private Date registrationDate;
+    private int engineSize;
 
     public int getEngineSize() {
         return engineSize;
@@ -18,7 +28,6 @@ public class Car {
         this.engineSize = engineSize;
     }
 
-    private int engineSize;
 
     public void setRegistrationDate(Date date) {
         this.registrationDate = date;

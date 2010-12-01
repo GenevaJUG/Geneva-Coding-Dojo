@@ -16,4 +16,8 @@ public class Car {
 	public boolean isRegisteredAfter(Date date) {
 		return registrationDate.compareTo(date) >= 0;
 	}
+
+	public int getCO2() {
+		throw new UnsupportedOperationException();
+	}
 }

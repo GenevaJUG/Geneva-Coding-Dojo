@@ -1,0 +1,31 @@
+Write a program that draw a christmas tree, the input is the height of the tree (min 3)
+
+Requirements:
+
+1. each line has an odd number of character, alternatively * and space
+
+example:
+	   *
+or
+       * * * * *
+
+2. Each 4 lines the base must be reduced by 2 *
+
+exemple:
+           *
+          * *
+         * * * 
+        * * * *
+         * * *
+        * * * *
+       * * * * *
+      * * * * * *
+
+3. the trunk should be 1/3 of the base line
+
+example:
+           *
+          * *
+         * * *
+        * * * *
+          |_|

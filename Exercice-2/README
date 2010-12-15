@@ -2,14 +2,22 @@ Write a program that draw a christmas tree, the input is the height of the tree 
 
 Requirements:
 
-1. each line has an odd number of character, alternatively * and space
+1. each line has X numbers of stars, separate by space
 
 example:
 	   *
 or
        * * * * *
 
-2. Each 4 lines the base must be reduced by 2 *
+
+2. Each new line has 1 more star
+
+example:
+       *
+      * *
+
+
+3. Each 4 lines the base must be reduced by 1 star
 
 exemple:
            *
@@ -21,7 +29,8 @@ exemple:
        * * * * *
       * * * * * *
 
-3. the trunk should be 1/3 of the base line
+
+4. the trunk should be 1/3 of the base line
 
 example:
            *

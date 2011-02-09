@@ -3,7 +3,8 @@ import static org.mockito.Mockito.*;
 import java.math.BigDecimal;
 import org.junit.Test;
 
-public class TestTaxCar {
+public class TestTaxCarBeforeMarch2001 {
+
 	private TaxCalculator taxCalculator = new TaxCalculator();
 
 	@Test
@@ -42,22 +43,6 @@ public class TestTaxCar {
 		assertThat(tax).isNotEqualTo(new BigDecimal("1100"));
 	}
 	
-	@Test
-	public void testEngineWithCO2_100() {
-		Car car = carWithCo2(100);
-
-		BigDecimal tax = taxCalculator.calculate(car);
-		
-		assertThat(tax).isEqualTo(new BigDecimal("65"));
-	}
-
-	private Car carWithCo2(int co2) {
-		Car car = mock(Car.class);
-		when(car.getCO2()).thenReturn(co2);
-		when(car.isRegisteredAfter(TaxCalculator.CO2_TAX_DATE)).thenReturn(true);
-		return car;
-	}
-
 	private static Car carBeforeMarch2001WithEngineSize(int engineSize) {
 		Car car = mock(Car.class);
 		when(car.getEngineSize()).thenReturn(engineSize);

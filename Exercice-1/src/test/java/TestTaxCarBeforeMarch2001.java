@@ -5,13 +5,13 @@ import org.junit.Test;
 
 public class TestTaxCarBeforeMarch2001 {
 
-	private TaxCalculator taxCalculator = new TaxCalculator();
+	private TaxCarCalculator taxCarCalculator = new TaxCarCalculator();
 
 	@Test
 	public void testEngineSizeLessThan1550ccAndRegisteredBeforeMarch2001() {
 		Car car = carBeforeMarch2001WithEngineSize(1000);
 
-		BigDecimal tax = taxCalculator.calculate(car);
+		BigDecimal tax = taxCarCalculator.calculate(car);
 
 		assertThat(tax).isEqualTo(new BigDecimal("110"));
 	}
@@ -20,7 +20,7 @@ public class TestTaxCarBeforeMarch2001 {
 	public void testEngineSize1550ccAndRegisteredBeforeMarch2001() {
 		Car car = carBeforeMarch2001WithEngineSize(1550);
 		
-		BigDecimal tax = taxCalculator.calculate(car);
+		BigDecimal tax = taxCarCalculator.calculate(car);
 		
 		assertThat(tax).isEqualTo(new BigDecimal("110"));
 	}
@@ -29,7 +29,7 @@ public class TestTaxCarBeforeMarch2001 {
 	public void testEngineSizeOver1550ccAndRegisteredBeforeMarch2001() {
 		Car car = carBeforeMarch2001WithEngineSize(2000);
 		
-		BigDecimal tax = taxCalculator.calculate(car);
+		BigDecimal tax = taxCarCalculator.calculate(car);
 		
 		assertThat(tax).isEqualTo(new BigDecimal("165"));
 	}
@@ -38,7 +38,7 @@ public class TestTaxCarBeforeMarch2001 {
 	public void testEngineSizeLessThan1550ccAndRegisteredAfterMarch2001() {
 		Car car = carAfterMarch2001WithEngineSize(1550);
 
-		BigDecimal tax = taxCalculator.calculate(car);
+		BigDecimal tax = taxCarCalculator.calculate(car);
 		
 		assertThat(tax).isNotEqualTo(new BigDecimal("1100"));
 	}
@@ -52,7 +52,7 @@ public class TestTaxCarBeforeMarch2001 {
 	private static Car carAfterMarch2001WithEngineSize(int engineSize) {
 		Car car = mock(Car.class);
 		when(car.getEngineSize()).thenReturn(engineSize);
-		when(car.isRegisteredAfter(TaxCalculator.CO2_TAX_DATE)).thenReturn(true);
+		when(car.isRegisteredAfter(TaxCarCalculator.CO2_TAX_DATE)).thenReturn(true);
 		return car;
 	}
 }

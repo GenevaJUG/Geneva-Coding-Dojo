@@ -1,4 +1,3 @@
-import org.junit.Test;
 import org.junit.experimental.theories.DataPoint;
 import org.junit.experimental.theories.Theories;
 import org.junit.experimental.theories.Theory;
@@ -14,7 +13,7 @@ import static org.mockito.Mockito.when;
 @RunWith(Theories.class)
 public class TestTaxCarAfterMarch2001 {
 
-    private static TaxCalculator taxCalculator = new TaxCalculator();
+    private static TaxCarCalculator taxCarCalculator = new TaxCarCalculator();
 
     @DataPoint
     public static DataTestCO2 upTo100 = new DataTestCO2(carWithCo2(85), "65");
@@ -43,7 +42,7 @@ public class TestTaxCarAfterMarch2001 {
 
     @Theory
     public void testEngineWithCO2(DataTestCO2 dataTestCO2) {
-        BigDecimal tax = taxCalculator.calculate(dataTestCO2.getCar());
+        BigDecimal tax = taxCarCalculator.calculate(dataTestCO2.getCar());
 
         assertThat(tax).isEqualTo(dataTestCO2.getExpectedTax());
     }
@@ -52,7 +51,7 @@ public class TestTaxCarAfterMarch2001 {
     private static Car carWithCo2(int co2) {
         Car car = mock(Car.class);
         when(car.getCO2()).thenReturn(co2);
-        when(car.isRegisteredAfter(TaxCalculator.CO2_TAX_DATE)).thenReturn(true);
+        when(car.isRegisteredAfter(TaxCarCalculator.CO2_TAX_DATE)).thenReturn(true);
         return car;
     }
 

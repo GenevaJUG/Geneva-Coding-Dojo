@@ -1,15 +1,11 @@
-/**
- * Created by IntelliJ IDEA.
- * User: codingdojo
- * Date: 2/9/11
- * Time: 1:12 PM
- * To change this template use File | Settings | File Templates.
- */
-public class Motorcycle {
+public class Motorcycle extends Vehicle {
 
-    private int engineSize;
+    public Motorcycle(int engineSize) {
+        super(engineSize);
+    }
 
-    public int getEngineSize() {
-        return engineSize;
+    @Override
+    public VEHICULE_TYPE getType() {
+        return Vehicle.VEHICULE_TYPE.MOTORCYCLE;
     }
 }

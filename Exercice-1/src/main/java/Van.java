@@ -1,11 +1,10 @@
-/**
- * Created by IntelliJ IDEA.
- * User: maximenowak
- * Date: 20 oct. 2010
- * Time: 12:24:56
- * To change this template use File | Settings | File Templates.
- */
-public class Van {
+public class Van extends Vehicle {
+
+    public Van(int engineSize, int weight) {
+        super(engineSize);
+        this.weight = weight;
+    }
+
     private int weight;
 
     public int getWeight() {
@@ -14,5 +13,10 @@ public class Van {
 
     public void setWeight(int weight) {
         this.weight = weight;
+    }
+
+    @Override
+    public VEHICULE_TYPE getType() {
+        return Vehicle.VEHICULE_TYPE.VAN;
     }
 }

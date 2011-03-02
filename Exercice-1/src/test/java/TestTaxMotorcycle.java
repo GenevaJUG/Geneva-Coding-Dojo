@@ -8,7 +8,7 @@ import static org.mockito.Mockito.*;
 
 public class TestTaxMotorcycle {
 
-    TaxCalculator taxCalculator = new TaxCalculator();
+    TaxMotorcycleCalculator taxCalculator = new TaxMotorcycleCalculator();
 
     @Test
     public void engineSizeLessOrEqualsTo150ShouldReturn15() {
@@ -35,6 +35,15 @@ public class TestTaxMotorcycle {
         BigDecimal tax =  taxCalculator.calculate(motorcycle);
 
         Assertions.assertThat(tax).isEqualTo(new BigDecimal("45"));
+    }
+
+    @Test
+    public void engineSizeMoreThan600ShouldReturn60() {
+        Motorcycle motorcycle = createMotorcycle(700);
+
+        BigDecimal tax =  taxCalculator.calculate(motorcycle);
+
+        Assertions.assertThat(tax).isEqualTo(new BigDecimal("60"));
     }
 
     private Motorcycle createMotorcycle(int engineSize) {

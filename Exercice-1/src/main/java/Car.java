@@ -1,17 +1,13 @@
 import java.util.Date;
 
-public class Car {
+public class Car extends Vehicle {
+
 	private final Date registrationDate;
-	private final int engineSize;
 
 	public Car(Date registrationDate, int engineSize) {
+        super(engineSize);
 		this.registrationDate = registrationDate;
-		this.engineSize = engineSize;
 	}
-
-    public int getEngineSize() {
-        return engineSize;
-    }
 
 	public boolean isRegisteredAfter(Date date) {
 		return registrationDate.compareTo(date) >= 0;
@@ -20,4 +16,9 @@ public class Car {
 	public int getCO2() {
 		throw new UnsupportedOperationException();
 	}
+
+    @Override
+    public VEHICULE_TYPE getType() {
+        return VEHICULE_TYPE.CAR;
+    }
 }

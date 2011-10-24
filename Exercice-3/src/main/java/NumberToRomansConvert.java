@@ -19,8 +19,10 @@ public class NumberToRomansConvert {
             } else if (number == 9 || number == 4) {
                 sb.append(convertRecursive(1,power)).append(convertRecursive(number + 1,power));
             } else if (number >= 5) {
+                // 5 + number -5
                 sb.append(convertToRomanNumberWithPowerOf10Mult5(power)).append(convertRecursive(number - 5, power));
             } else {
+                // 1 + number-1
                 sb.append(convertToRomanNumberWithPowerOf10(power)).append(convertRecursive(number - 1, power));
             }
         }

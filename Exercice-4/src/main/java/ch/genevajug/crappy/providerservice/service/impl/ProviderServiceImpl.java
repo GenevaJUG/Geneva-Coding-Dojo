@@ -27,10 +27,7 @@ import java.util.Set;
 
 /**
  * A simple implementation of the providers service. This is the class that's
- * going to be tested using PowerMock. The main reason for the test is to
- * demonstrate how to use PowerMock to set internal state (i.e. setting the
- * <code>providerDao</code> field without setters), partial mocking and
- * expectations of private methods.
+ * going to be tested using PowerMock.
  */
 public class ProviderServiceImpl implements ProviderService {
 

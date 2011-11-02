@@ -57,7 +57,7 @@ public class ServiceRegistrator implements IServiceRegistrator {
 		return id;
 	}
 
-	/**
+	/**           Mock for ServiceRegistratio
 	 * {@inheritDoc}
 	 */
 	public void unregisterService(long id) {

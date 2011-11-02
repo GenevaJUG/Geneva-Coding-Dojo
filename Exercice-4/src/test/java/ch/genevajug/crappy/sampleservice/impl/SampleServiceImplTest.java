@@ -86,6 +86,5 @@ public class SampleServiceImplTest {
             verifyZeroInteractions(personService);
             verifyZeroInteractions(eventService);
         }
-
     }
 }

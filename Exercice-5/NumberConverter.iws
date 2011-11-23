@@ -82,7 +82,7 @@
       <file leaf-file-name="SwissNumberConverter.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ch/genevajug/SwissNumberConverter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="0" selection-start="409" selection-end="409" vertical-scroll-proportion="0.27807486">
+            <state line="19" column="114" selection-start="726" selection-end="726" vertical-scroll-proportion="0.5187166">
               <folding />
             </state>
           </provider>
@@ -91,7 +91,7 @@
       <file leaf-file-name="Readme.md" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Readme.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="14" selection-start="120" selection-end="120" vertical-scroll-proportion="-3.6190476">
+            <state line="24" column="13" selection-start="584" selection-end="584" vertical-scroll-proportion="-5.6666665">
               <folding />
             </state>
           </provider>
@@ -118,6 +118,7 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/ch/genevajug/SwissNumberConverter.java" />
         <option value="$PROJECT_DIR$/src/test/java/SwissNumberConverterTest.java" />
+        <option value="$PROJECT_DIR$/Readme.md" />
       </list>
     </option>
   </component>
@@ -509,16 +510,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Readme.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="14" selection-start="120" selection-end="120" vertical-scroll-proportion="-3.6190476">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="8" selection-start="440" selection-end="440" vertical-scroll-proportion="0.0">
@@ -535,9 +526,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Readme.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="13" selection-start="584" selection-end="584" vertical-scroll-proportion="-5.6666665">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ch/genevajug/SwissNumberConverter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="409" selection-end="409" vertical-scroll-proportion="0.27807486">
+        <state line="19" column="114" selection-start="726" selection-end="726" vertical-scroll-proportion="0.5187166">
           <folding />
         </state>
       </provider>
